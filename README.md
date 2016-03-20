@@ -12,4 +12,9 @@ using AWS
   3. Then install AWS CLI and modify do "aws configure" like this: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
 * aws_ipython.py
+  1. Create IPython NoteBook in AWS.
+  2. Upload file to S3.
+  3. Read S3 file to your AWS IPython and do some operations, the output is saved as .txt file.
+  4. Upload your .txtx file to S3.
+  5. Check the S3 files through AWS IPython.
 
