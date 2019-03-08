@@ -17,4 +17,6 @@ using AWS
   3. Read S3 file to your AWS IPython and do some operations, the output is saved as .txt file.
   4. Upload your .txtx file to S3.
   5. Check the S3 files through AWS IPython.
+  * <b>In fact, in jupyter notebook, we can just run aws command line to upload/download files from/into S3</b>
+    * `aws --profile [profile_name] s3 cp ~/Desktop/my_file.csv s3://my_bucket/my_file.csv`, repalce "profile_name" with the profile name
 
