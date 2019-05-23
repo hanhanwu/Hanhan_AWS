@@ -22,3 +22,9 @@
 ### Choosing EC2 Instance
 * EC2 Instances Types & Price: https://aws.amazon.com/ec2/instance-types/
   * Instances start with "m" are memory optimized, those start with "c" are computation optimized. When running the code multi-threading, the instance starts with "m" may work better than those start with "c"
+
+
+## AWS Training
+* Don't quite like following the steps and lots of times, there were settings problems, not sure why am I creating all these settings. But, take a note of these training resources.
+* Data Streaming and database: https://dataprocessing.wildrydes.com/streaming-aggregation.html
+* Serverless workshops: https://github.com/aws-samples/aws-serverless-workshops
