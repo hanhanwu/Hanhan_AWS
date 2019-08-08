@@ -28,3 +28,32 @@
 * Don't quite like following the steps and lots of times, there were settings problems, not sure why am I creating all these settings. But, take a note of these training resources.
 * Data Streaming and database: https://dataprocessing.wildrydes.com/streaming-aggregation.html
 * Serverless workshops: https://github.com/aws-samples/aws-serverless-workshops
+
+## AWS Sagemaker Training
+* Sagemaker iPython Examples: https://github.com/awslabs/amazon-sagemaker-examples
+* Hypterparam Tuning
+  * Hyperparam tuning example: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/hyperparameter_tuning/xgboost_random_log/hpo_xgboost_random_log.ipynb
+  * Analyze Hyper Tuning results example: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/hyperparameter_tuning/analyze_results/HPO_Analyze_TuningJob_Results.ipynb
+    * Through AWS Sagemaker console, on the left side bar, there is "Hyperparameter Tuning", click on that to find the names of those jobs. You just need to replace the `tuning_job_name` here, and later `sage_client` will call `describe_hyper_parameter_tuning_job`
+    * After hyperparam tuning, you can also create model with the optimized params, the instructor said you can just call `create_model` through `sage_client` with the `tuning_job_name`, didn't try this
+  * Model deployment example: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.ipynb
+    * `Inference` will deploy the model you have trained. 
+      * It also supports AB deployment. Deploy 1 version on production, test other version(s) on staging environment
+    * "billable seconds" shows how much time you need to pay for
+    * "endpoint configuration"
+      * It's where you can check deployment progress
+      * delete the endnpoint throgh notebook, otherwise you need to pay more
+  * Save iPython notebook in "SageMaker" folder, if you save things in home directory, after restart, everything will be gone.
+  * Elastic Inference example: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/sagemaker-python-sdk/tensorflow_serving_using_elastic_inference_with_your_own_model/tensorflow_serving_pretrained_model_elastic_inference.ipynb
+    * In sagemaker, 10% cost is training model, 90% is inference deployment. 
+    * "Amazon Elastic Inference (EI) is a resource you can attach to your Amazon EC2 instances to accelerate your deep learning (DL) inference workloads. EI allows you to add inference acceleration to an Amazon SageMaker hosted endpoint or Jupyter notebook for a fraction of the cost of using a full GPU instance." Especially useful in deep learning.
+    * `accelerator_type='ml.eia1.medium'` in deploy function, you can also choose large accelerator type
+  * Ground Truth example: https://github.com/aws-samples/sagemaker-horovod-distributed-training/blob/master/notebooks/GndTruth/from_unlabeled_data_to_deployed_machine_learning_model_ground_truth_demo_image_classification.ipynb
+    * Ground Truth is a tool that allows human to label some of the data, normally that's the low confidence records after model training.
+  * Reinforcement example: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/reinforcement_learning/rl_portfolio_management_coach_customEnv/rl_portfolio_management_coach_customEnv.ipynb
+  * Other info & resources
+    * `boto 3`: it’s the AWS python SDK, through which you can all methods in python
+    * Sagemaker SDK (where you check all the methods you can call)
+https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagemaker.html
+    * Params, support GPU/CPU, check https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html
+    * Lambda is used to execute functions, 15 mins time limit, better to be used for short time execution. When lambda is not available, better to use step function, but not everything can be achieved through step function for now.
