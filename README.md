@@ -57,3 +57,29 @@
 https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagemaker.html
     * Params, support GPU/CPU, check https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html
     * Lambda is used to execute functions, 15 mins time limit, better to be used for short time execution. When lambda is not available, better to use step function, but not everything can be achieved through step function for now.
+    
+## Training - Process Model: CRISP-DM on the AWS Stack
+### Data Understanding Tools
+* S3 raw data ->  Glue stores schema only -> Athena do SQL query for basic analysis -> QuickSight for visualization
+### Data Preparation & Modeling
+* To make it simple, you can just use EC2 + Ipython, even no need above data understanding tools
+* They also suggest
+  * EMR + Spark
+  * EC2 + Deep Learning AMI
+### Planning Deployment
+* Runtime
+  * Amazon EC2
+  * Amazon EC2 Container Service
+  * AWS Lambda
+* Infrastructure Deployment
+  * AWS CloudFormation
+  * AWS OpsWorks
+  * AWS Elastic Beanstalk
+* Code Management
+  * AWS CodeCommit
+  * AWS CodePipeline
+  * AWS Elastic Beanstalk
+* Monitoring
+  * Amazon CloudWatch
+  * AWS CloudTrail
+  * AWS Elastic Beanstalk
