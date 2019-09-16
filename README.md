@@ -83,3 +83,8 @@ https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagem
   * Amazon CloudWatch
   * AWS CloudTrail
   * AWS Elastic Beanstalk
+  
+## Training - Developing Machine Learning Applications
+* SageMaker Neo
+  * Neo is a new capability of Amazon SageMaker that enables machine learning models to train once and run anywhere in the cloud and at the edge.
+  * Neo Compilation IPython Examples: https://github.com/awslabs/amazon-sagemaker-examples/tree/master/sagemaker_neo_compilation_jobs
