@@ -1,5 +1,8 @@
 # Hanhan_AWS
 
+### Load S3 data
+Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_data.py
+
 
 ### Create IPython Notebook on AWS
   1. I am following this link to create the IPython NoteBook (don't check that video, just copy the code in the webpage will keep you from more troubles):   http://blog.impiyush.me/2015/02/running-ipython-notebook-server-on-aws.html
