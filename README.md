@@ -6,6 +6,8 @@
   * `mkdir ~/.linuxbrew/bin`
   * `ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin`
   * `eval $(~/.linuxbrew/bin/brew shellenv)`
+* How to install mysqlclient
+  * https://pypi.org/project/mysqlclient/
 
 ### Load S3 data
 Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_data.py
