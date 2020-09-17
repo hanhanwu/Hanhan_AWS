@@ -8,6 +8,9 @@
   * `eval $(~/.linuxbrew/bin/brew shellenv)`
 * How to install mysqlclient
   * https://pypi.org/project/mysqlclient/
+* When it's showing "no space left on the device" during packages installation
+  * `pip install -r requirements.txt --build=~/tmp/build/`, it's `--build=~/tmp/build/` makes a difference
+  * You can check filesystem availability through `df -h`
 
 ### Load S3 data
 Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_data.py
