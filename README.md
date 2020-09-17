@@ -1,17 +1,6 @@
 # Hanhan_AWS
 
-### Annoying Installation on EC2
-* How to install Homebrew
-  * `git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew`
-  * `mkdir ~/.linuxbrew/bin`
-  * `ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin`
-  * `eval $(~/.linuxbrew/bin/brew shellenv)`
-* How to install mysqlclient
-  * https://pypi.org/project/mysqlclient/
-* When it's showing "no space left on the device" during packages installation
-  * The reason caused the problem might be because of the small partition in your virtual env, it has nothing to do with EC2 settings if your instance is large enough
-  * `pip install -r requirements.txt --build=~/tmp/build/`, it's `--build=~/tmp/build/` makes a difference
-  * You can check filesystem availability through `df -h`
+### [EC2 Relevant Commands & Troubleshooting][1]
 
 ### Load S3 data
 Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_data.py
@@ -104,3 +93,6 @@ https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagem
 * SageMaker Neo
   * Neo is a new capability of Amazon SageMaker that enables machine learning models to train once and run anywhere in the cloud and at the edge.
   * Neo Compilation IPython Examples: https://github.com/awslabs/amazon-sagemaker-examples/tree/master/sagemaker_neo_compilation_jobs
+
+
+[1]:https://github.com/hanhanwu/Basic_But_Useful/blob/master/RA_command_lines.md#aws-ec2-troubleshooting
