@@ -9,6 +9,7 @@
 * How to install mysqlclient
   * https://pypi.org/project/mysqlclient/
 * When it's showing "no space left on the device" during packages installation
+  * The reason caused the problem might be because of the small partition in your virtual env, it has nothing to do with EC2 settings if your instance is large enough
   * `pip install -r requirements.txt --build=~/tmp/build/`, it's `--build=~/tmp/build/` makes a difference
   * You can check filesystem availability through `df -h`
 
