@@ -5,6 +5,10 @@
 ### Load S3 data
 Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_data.py
 
+### AWS Glue
+* [Glue configuration][2]
+  * Change worker numbers, worker type could improve the performance
+* [Glue Pricing][3]
 
 ### Create IPython Notebook on AWS
   1. I am following this link to create the IPython NoteBook (don't check that video, just copy the code in the webpage will keep you from more troubles):   http://blog.impiyush.me/2015/02/running-ipython-notebook-server-on-aws.html
@@ -96,3 +100,5 @@ https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagem
 
 
 [1]:https://github.com/hanhanwu/Basic_But_Useful/blob/master/RA_command_lines.md#aws-ec2-troubleshooting
+[2]:https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html
+[3]:https://aws.amazon.com/glue/pricing/
