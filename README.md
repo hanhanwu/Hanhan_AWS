@@ -31,6 +31,10 @@ Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_
 ### Choosing EC2 Instance
 * EC2 Instances Types & Price: https://aws.amazon.com/ec2/instance-types/
   * Instances start with "m" are memory optimized, those start with "c" are computation optimized. When running the code multi-threading, the instance starts with "m" may work better than those start with "c"
+* EC2 Connection through AWSCLI troubleshooting
+  * "SSL certificate verify failed", but commands like `aws s3 ls` works fine
+    * Find certificate path through `echo $AWS_CA_BUNDLE`
+    * In ~/.aws/config, add `ca_bundle = <path to certificate>`, change path to what you found above
 
 
 ## AWS Training
