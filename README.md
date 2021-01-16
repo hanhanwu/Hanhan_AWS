@@ -9,6 +9,7 @@ Check the code here: https://github.com/hanhanwu/Hanhan_AWS/blob/master/load_s3_
 * [Glue configuration][2]
   * Change worker numbers, worker type could improve the performance
 * [Glue Pricing][3]
+* [Glue for ETL with Redshift, S3][4]
 
 ### Create IPython Notebook on AWS
   1. I am following this link to create the IPython NoteBook (don't check that video, just copy the code in the webpage will keep you from more troubles):   http://blog.impiyush.me/2015/02/running-ipython-notebook-server-on-aws.html
@@ -106,3 +107,4 @@ https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/sagem
 [1]:https://github.com/hanhanwu/Basic_But_Useful/blob/master/RA_command_lines.md#aws-ec2-troubleshooting
 [2]:https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html
 [3]:https://aws.amazon.com/glue/pricing/
+[4]:https://www.analyticsvidhya.com/blog/2021/01/using-aws-data-wrangler-with-aws-glue-job-2-0/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
